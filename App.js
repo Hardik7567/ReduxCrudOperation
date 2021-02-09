@@ -12,7 +12,7 @@ import Navigator from './NAVIGATION/Navigator';
 import Profile from "./Screen/Profile";
 import Home from './Screen/Home';
 
-// const store=createStore(userLogin);
+// const store=createStore(userLogin); gyuhguyhbub
 //  console.log('store',store);
 export default function App(props) {
   return (
