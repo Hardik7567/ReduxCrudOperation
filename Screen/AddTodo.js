@@ -104,7 +104,6 @@ const styles = StyleSheet.create({
   },
   forSecondView: {
     flex: 2,
-
   }
   ,
   for_input: {
