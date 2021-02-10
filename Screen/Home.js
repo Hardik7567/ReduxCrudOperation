@@ -33,9 +33,9 @@ const Home = ({ navigation, route }) => {
   }
   const todoItems = item.map((task) => {
     return (
-      <View >
+      <View key={task.Id} >
         <View style={{ justifyContent: 'space-around', marginTop: 5 }} >
-          <TouchableHighlight onPress={() => { navigation.navigate('UpdateScreen', { userId: task.Id }) }} >
+          <TouchableHighlight style={styles.Touchable} onPress={() => { navigation.navigate('UpdateScreen', { userId: task.Id }) }} >
             <Text key={task.Id} > {'Email : '} {task.Email} {" "} {'Password : '}{task.Password} </Text>
           </TouchableHighlight>
           <Button title="delete" onPress={() => {
@@ -50,6 +50,7 @@ const Home = ({ navigation, route }) => {
 
   });
   useEffect(() => {
+    console.log('updateddata',data)
   }, [todoItems, data])
 
   return (
@@ -70,8 +71,8 @@ const Home = ({ navigation, route }) => {
              /> */}
 
       <View style={{ marginTop: 10, flexDirection: 'row', justifyContent: 'space-around' }} >
-        <Button title="press" onPress={() => { navigation.navigate("Profile ") }} />
-        <Button title="update" onPress={() => { navigation.navigate('UpdateScreen') }} />
+        
+        
       </View>
     </View>
   );
@@ -80,7 +81,12 @@ const Home = ({ navigation, route }) => {
 
 const styles = StyleSheet.create({
 
+Touchable:{
+  margin:10,
+  padding:5,
+  borderWidth:1
 
+}
 });
 
 export default Home;

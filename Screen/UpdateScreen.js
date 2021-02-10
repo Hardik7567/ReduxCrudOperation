@@ -28,6 +28,7 @@ const UpdateScreen = props => {
     }
     dispatch(UpdateItem(data, userId));
     props.navigation.navigate('Home', { data: item })
+  
   };
   // useEffect(() => {
   //   console.log("update", item);
