@@ -1,4 +1,4 @@
-import { ADD_USER, UPADATE_USER, DELETE_USER } from "../constant";
+import { ADD_USER, UPDATE_USER, DELETE_USER } from "../constant";
 
 export const AddItem = message => ({
   type: ADD_USER,
@@ -10,8 +10,10 @@ export const DeleteItem = id => ({
   id
 });
 
-export  const UpdateItem = ({message, id}) => ({
-  type : UPDATE_USER,
-  message,
-  id
-});
+export const UpdateItem = (data, id) => {
+  return {
+    type: UPDATE_USER,
+    data: data,
+    id: id
+  }
+}
